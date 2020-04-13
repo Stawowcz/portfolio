@@ -1,0 +1,162 @@
+ /*General*/
+
+ :root {
+  --primary: #dddddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 2px 5px rgba(104, 104, 104, 0.8);
+  --butt: #red
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background-color: lightgray;
+  margin: 30px 50px;
+}
+
+.grid-container-contacts {
+  display: grid;
+  grid-gap: 50px;
+}
+
+.nav-link-part-contacts a{
+  background: var(--primary);
+  color: var(--dark);
+  text-decoration: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow)
+}
+.nav-link-part-contacts a:hover{
+  background: var(--dark);
+  color: var(--light);
+} 
+
+/* Form */
+
+.container-of-rest {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-areas:
+  'form contacts';
+} 
+
+ form {
+  /* background-color: cadetblue; */
+  grid-area: form;
+  border-radius: 1px;
+}
+
+.contacts {
+  grid-area: contacts;
+  align-items:center;
+} 
+
+.contacts div {
+  /* height: 300px; */
+  text-align: center;
+  background-size: 100%;
+}
+
+.contacts a {
+  display: block;
+  padding: 10px 0;
+  background: var(--primary);
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+} 
+
+.contacts a:hover{
+  background: var(--dark);
+  color: var(--light);
+} 
+
+.title-contacts {
+  background: var(--primary);
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.phone-email {
+  position: relative;
+  top: 10px;
+}
+
+input[type=text], textarea {
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  resize: vertical;
+  float: left;
+  margin-top: 6px;
+  width:45%;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+
+button {
+  background: lightgreen;
+  color: var(--light);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  float: left;
+  box-shadow: var(--shadow);
+  background: var(--dark);
+}
+
+button:hover {
+  background: var(--primary);
+  color: var(--dark);
+} 
+
+.form-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+footer {
+  margin-top: 1rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 0.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  input[type=text], textarea, button {
+    width: 100%;
+    margin-top: 0;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .container-of-rest {
+  grid-template-areas:
+  'form' 
+  'contacts';
+} 
+}
+

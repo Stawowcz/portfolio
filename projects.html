@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link href=<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="nav-container-projects">
+        <div class="nav-part-projects">
+            <div class="left-side-part-projects">
+                <div class="nav-link-part-projects">
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+            <div class="title-projects">
+                <h1>My projects</h1>
+            </div>
+        </div>
+    </div>
+    <div class="backgrounder">
+        <div class="container-projects">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+                <div class="slide slide1">
+                
+                    <div class="slide-content">
+                        <div class="project-text">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Kubson.kk">
+                                <div class="project-subtitle">dddddd.</div>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <div class="project-text">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Kubson.kk">
+                                <div class="project-subtitle">ddddd</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="slide-content">
+                        <div class="project-text">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Kubson.kk">
+                                <div class="project-subtitle">aaaaaaa.</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+        <div class="container-paragraph">
+            <div class="descript descriptionn1">Event brite is the leading event management platform on the web with millions of individuals utilizing their applications
+                to find, register or, and management events in numerous industries.</div>
+            <div class="descript descriptionn2">Event brite is the leading event management platform on the web with millions of individuals utilizing their applications
+                to find, register or, and management events in numerous industries.</div>
+            <div class="descript descriptionn3">Event brite is the leading event management platform on the web with millions of individuals utilizing their applications
+                to find, register or, and management events in numerous industries.</div>
+               
+        </div>
+    </div>
+
+</div>
+            <script>
+
+            let slidesAbout = document.querySelectorAll(".slide");
+            let descr = document.querySelectorAll(".descript")
+            arrowRight = document.querySelector("#arrow-right")
+            arrowLeft = document.querySelector("#arrow-left")
+            let current = 0;
+
+            function reset() {
+                for(let i=0; i < slidesAbout.length; i++){
+                    slidesAbout[i].style.display = "none";
+                    descr[i].style.display = "none";
+                    
+                }
+            }
+            function startSlide() {
+                reset();
+                slidesAbout[0].style.display = "block";
+                descr[0].style.display = "block";
+                
+            }
+
+            
+            function slideLeft() {
+                reset();
+                slidesAbout[current-1].style.display = "block";
+                descr[current-1].style.display = "block";
+                current--;
+
+            }
+
+            function slideRight() {
+                reset()
+                slidesAbout[current+1].style.display = "block";
+                descr[current+1].style.display = "block";
+                current++;
+            }
+
+            arrowLeft.addEventListener('click', function(){
+                if(current === 0){
+                    current = slidesAbout.length;
+                }
+                slideLeft()
+            });
+
+            arrowRight.addEventListener('click', function(){
+                if(current === slidesAbout.length -1 ){
+                    current = -1;
+                }
+                slideRight();
+            })
+            startSlide()
+          
+             </script>
+
+
+</body>
+</html>
